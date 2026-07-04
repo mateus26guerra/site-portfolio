@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+
+<h1 class="section-title">Lista de todos os cursos</h1>
+
+<div class="cursos-lista">
+  <div class="curso-card" *ngFor="let curso of cursosUdemy">
+    <a [href]="curso.link" target="_blank">
+      <img [src]="curso.imagem" [alt]="curso.titulo" class="curso-img" />
+      <h3 class="curso-titulo">{{ curso.titulo }}</h3>
+      <p class="curso-plataforma">{{ curso.plataforma }}</p>
+    </a>
+  </div>
+</div>
+
+<div class="section-title ">
+    <a [routerLink]="['']">voltar</a>
+  </div>
+  
+<app-particles-contact></app-particles-contact>
+<app-footer></app-footer>

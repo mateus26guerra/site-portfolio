@@ -1,0 +1,193 @@
+.section-title {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .section-subtitle {
+    color: #ffffff;
+    font-size: 1.5rem;
+    border-bottom: 3px solid #3b82f6;
+    display: inline-block;
+    margin: 2rem auto 1rem auto;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  
+  .formacao-box {
+    background: rgba(30, 41, 59, 0.9);
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: white;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.2);
+    margin-bottom: 40px;
+  }
+  
+  .periodo-info {
+    color: #93c5fd;
+    margin-bottom: 1rem;
+  }
+  
+  .descricao-formacao {
+    color: #e5e7eb;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  .cursos-section {
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .cursos-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+    flex: 1;
+  }
+  
+  .cursos-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .curso-card {
+    background: #1e293b;
+    border-radius: 10px;
+    min-width: 200px;
+    padding: 1rem;
+    text-align: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .curso-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .curso-img {
+    width: 100%;
+    max-height: 20vh;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .curso-titulo {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .curso-plataforma {
+    color: #93c5fd;
+    font-size: 0.85rem;
+  }
+  
+  .curso-card a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .certificado-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 6px 12px;
+    background-color: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .certificado-btn:hover {
+    background-color: #2563eb;
+  }
+  
+  /* NOVO: Botões das setas minimalistas */
+  .carousel-btn {
+    background-color:  rgba(59, 130, 246, 0.2);
+    border: none;
+    color: #ffffff;
+    font-size: 1.4rem;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-btn:hover {
+    background-color: #0c265e;
+  }
+  
+  .left-btn {
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+  }
+  
+  .right-btn {
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+  }
+  
+  :host {
+    display: block;
+    margin-bottom: 40vh;
+  }
+  .section-title a {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color:  rgba(59, 130, 246, 0.2);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    font-weight: 500;
+  }
+  
+  .section-title a:hover {
+    background-color: rgba(11, 66, 153, 0.2);
+  }
+  .formacao-box-link {
+    text-decoration: none;
+    display: block;
+  }
+  
+  .formacao-box {
+    background: rgba(30, 41, 59, 0.9);
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: white;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .formacao-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+  }
+  

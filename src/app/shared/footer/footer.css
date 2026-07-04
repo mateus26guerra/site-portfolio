@@ -1,0 +1,121 @@
+footer {
+    background-color: #0f0f0f;
+    color: #d1d5db;
+    padding: 3rem 1rem;
+    font-family: sans-serif;
+    letter-spacing: 0.5px; /* aumenta o espaço entre letras */
+
+  }
+  
+  footer h2 {
+    font-size: 2rem;
+    color: #3b82f6;
+    letter-spacing: 0.5px; /* aumenta o espaço entre letras */
+
+  }
+  
+  footer h2 span {
+    color: white;
+  }
+  
+  footer p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  footer h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  footer ul li {
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+  }
+  
+  footer ul li a {
+    text-decoration: none;
+    color: #d1d5db;
+  }
+  
+  footer ul li a:hover {
+    color: white;
+  }
+  
+  footer .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  footer .social-icons i {
+    color: #a1a1aa;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  footer .social-icons i:hover {
+    color: white;
+  }
+  
+  footer .contact-info i {
+    color: #3b82f6;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  footer hr {
+    border: 0;
+    border-top: 1px solid #2a2a2a;
+    margin: 2rem 0;
+  }
+  
+  footer .bottom-text {
+    text-align: center;
+    font-size: 1rem;
+    color: #6b7280;
+  }
+  
+  /* Botão voltar ao topo */
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .back-to-top:hover {
+    background-color: #3b82f6;
+  }
+
+
+  .footer-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 13rem; /* Aumenta o espaçamento entre colunas */
+    max-width: 1200px;
+    margin: auto;
+  }
+  

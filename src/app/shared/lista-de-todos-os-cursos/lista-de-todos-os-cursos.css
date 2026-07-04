@@ -1,0 +1,81 @@
+.section-title {
+    color: white;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 15vh;     /* <-- espaço acima */
+    margin-bottom: 2rem;
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* lista-de-todos-os-cursos.css */
+.cursos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  .curso-card {
+    background: #1e293b;
+    border-radius: 10px;
+    width: 200px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .curso-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .curso-img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .curso-titulo {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .curso-plataforma {
+    color: #93c5fd;
+    font-size: 0.85rem;
+  }
+  
+
+  a {
+    text-decoration: none;  /* remove o underline */
+    color: inherit;         /* mantém a cor do texto ao redor */
+    outline: none;          /* remove o contorno de foco (atenção a acessibilidade!) */
+  }
+  
+  /* Opcional: se quiser remover o contorno azul ao clicar/tabular no link, use: */
+  a:focus, a:active {
+    outline: none;
+  }
+  
+
+  
+  .section-title a {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color:  rgba(59, 130, 246, 0.2);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    font-weight: 500;
+  }
+  
+  .section-title a:hover {
+    background-color: rgba(11, 66, 153, 0.2);
+  }
+  

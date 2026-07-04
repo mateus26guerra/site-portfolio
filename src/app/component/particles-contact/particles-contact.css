@@ -1,0 +1,141 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+  }
+  
+  .section-title {
+    color: white;
+    font-size: 3rem; /* Aumentado */
+    font-weight: 900;
+    margin-bottom: 2rem;
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  
+  #particles-contact {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f0f0f;
+    z-index: -1;
+  }
+  
+  .social-card i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+  }
+  
+  
+  .contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 900px;
+    height: auto;
+    min-height: 450px;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 15vh; /* ADICIONADO para criar espaço com o final da página */
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Esquerda */
+  .contact-left {
+    background-color: #000;
+    color: white;
+    flex: 1;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+  }
+  
+  .social-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 220px;
+  }
+  
+  .social-card {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  .social-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 191, 255, 0.6);
+    background-color: #111;
+  }
+  
+  /* Direita */
+  .contact-right {
+    flex: 1;
+    padding: 40px;
+    background-color: rgba(0, 0, 139, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: inset 0 0 20px #00bfff;
+  }
+  
+  .contact-right input,
+  .contact-right textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    background-color: #f0f0f0;
+    color: black;
+  }
+  
+  .contact-right button {
+    background: linear-gradient(to right, #00aaff, #005ea3);
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .contact-right button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 170, 255, 0.5);
+  }
+  
+  
+    
+  
+  
+  .esapco {
+    margin:  0 20px 30vh 20px /* espaço vertical aumentado */
+  }
+  
+  
+  

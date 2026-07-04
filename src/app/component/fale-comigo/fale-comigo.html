@@ -1,0 +1,34 @@
+<div style="margin-top: 40vh;">
+</div>
+
+
+
+<h1 class="section-title">Contato</h1>
+
+<div class="contact-wrapper">
+  <!-- Painel esquerdo com redes sociais -->
+  <div class="contact-left">
+    <h2>Minhas redes</h2>
+    <p>Você também pode me encontrar por aqui:</p>
+    <div class="social-cards">
+      <a class="social-card" href="mailto:mateus26guerra@gmail.com" target="_blank">
+        <i class="fas fa-envelope"></i> Gmail
+      </a>
+      <a class="social-card" href="https://github.com/mateus26game" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a class="social-card" href="https://www.linkedin.com/in/mateus-guerra-117637280/" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    </div>
+    
+  </div>
+
+  <!-- Formulário de contato -->
+  <div class="contact-right">
+    <h2>Fale comigo</h2>
+    <input type="text" placeholder="Seu nome" [(ngModel)]="nome" />
+    <textarea rows="5" placeholder="Sua mensagem" [(ngModel)]="mensagem"></textarea>
+    <button (click)="enviarMensagem()">Enviar via WhatsApp</button>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<h1 class="section-title">Lista de Projetos</h1>
+
+<div class="projetos-container">
+  <div
+    class="projeto-card"
+    *ngFor="let projeto of projetoAny; let i = index"
+    (click)="toggleDetalhes(i)"
+    [class.expandido]="projetoExpandidoIndex === i"
+  >
+    <h1 [class.titulo-expandido]="projetoExpandidoIndex === i" class="section-titlee">
+      {{ projeto.nome }}
+    </h1>
+
+    <img
+      [src]="projeto.imagem"
+      [alt]="projeto.nome"
+      [class.img-expandida]="projetoExpandidoIndex === i"
+      class="projeto-imagem"
+    />
+
+    <p *ngIf="projetoExpandidoIndex !== i">{{ projeto.texto }}</p>
+    <p *ngIf="projetoExpandidoIndex === i" class="texto-detalhado">
+      {{ projeto.textoDetalhado }}
+    </p>
+
+    <div *ngIf="projetoExpandidoIndex === i">
+      <div class="projeto-tecnologias">
+        <img [src]="projeto.tecnologia" alt="Tecnologias usadas" />
+      </div>
+
+      <div class="projeto-links">
+        <a [href]="projeto.link_back" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a [href]="projeto.linkdoVideo" target="_blank">
+          <i class="fab fa-youtube"></i> Vídeo
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
