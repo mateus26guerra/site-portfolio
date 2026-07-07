@@ -1,63 +1,86 @@
-// src/app/services/projetos.service.ts
 import { Injectable } from '@angular/core';
+
+export interface Projeto {
+  nome: string;
+
+  descricao: string;
+
+  descricaoCompleta: string;
+
+  github?: string;
+  demo?: string;
+  video?: string;
+
+  tecnologias: string;
+
+  imagemCapa: string;
+
+  // Galeria
+  imagem1?: string;
+  tituloImagem1?: string;
+
+  imagem2?: string;
+  tituloImagem2?: string;
+
+  imagem3?: string;
+  tituloImagem3?: string;
+
+  imagem4?: string;
+  tituloImagem4?: string;
+
+  // UML
+  uml?: string;
+  tituloUml?: string;
+
+  // Arquitetura
+  arquitetura?: string;
+  tituloArquitetura?: string;
+
+  // Projeto privado
+  privado: boolean;
+  tituloAviso?: string;
+  descricaoAviso?: string;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjetosService {
+
   constructor() {}
 
-  
-  private projetos = [
+  private projetos: Projeto[] = [
 
     {
-      nome: " barbearias com gestão de clientes",
-      link_back: "https://github.com/mateus26game/tela-de-login",
-      linkdoVideo: "https://youtu.be/yy0Betc2Has",
-      texto: "Este é um sistema completo desenvolvido para o gerenciamento de clientes em barbearias",
-      textoDetalhado: "Este é um sistema completo para gerenciamento de clientes em barbearias, com versões web e mobile, desenvolvido com foco em organização, escalabilidade e facilidade de uso. A plataforma permite o cadastro e listagem de clientes, agendamento de atendimentos por data, controle de pagamentos (com filtros para clientes que já pagaram ou estão em aberto), além da geração automática de relatórios em PDF, como a lista de cortes do dia e notas fiscais individuais. A versão mobile, desenvolvida em Java para Android, oferece as mesmas funcionalidades do painel web, permitindo o uso direto pelo barbeiro em seu celular. O backend foi construído com Java, Spring Boot, JPA e PostgreSQL, utilizando arquitetura MVC; já o frontend foi desenvolvido com Angular e Bootstrap.",
-      tecnologia: "https://skillicons.dev/icons?i=java,spring,angular",
-      imagem: "https://i.pinimg.com/736x/b2/89/88/b28988f0bf59f6fa3c61bceee95b8bdf.jpg"
-    },
-    {
-      nome: "Projeto Base - Login com Spring Security + JWT",
-      link_back: "https://github.com/mateus26game/tela-de-login",
-      linkdoVideo: "https://youtu.be/7UTR0WGK7BU",
-      texto: "Este é um projeto backend com Spring Boot, que implementa login e registro de usuários usando Spring Security, JWT e banco de dados PostgreSQL.",
-      textoDetalhado: "Este projeto é uma base sólida para autenticação e autorização em aplicações Java com Spring Boot, utilizando Spring Security com JWT (JSON Web Tokens). Ele também integra o PostgreSQL como banco de dados principal. O objetivo é oferecer um ponto de partida reutilizável para projetos futuros, com autenticação segura, controle de acesso e estrutura modular pronta para ser expandida com funcionalidades como cadastros, dashboards, e muito mais.",
-      tecnologia: "https://skillicons.dev/icons?i=java,spring,angular",
-      imagem: "https://www.brasilcode.com.br/wp-content/uploads/2020/09/Formularios-de-Login.png"
-    },
-    {
-      nome: "Sistema de Gestão de Filmes",
-      link_back: "https://github.com/seu-repo/chatbot-ai",
-      linkdoVideo: "https://github.com/user-attachments/assets/f5221b62-5576-4c59-86cf-2311296fa705",
-      texto: "Sistema Administrativo de Cadastro e Gerenciamento de Filmes",
-      textoDetalhado: "Sistema Administrativo de Cadastro e Gerenciamento de Filmes Este projeto é um sistema backend desenvolvido em Java com Spring Boot para gerenciar o cadastro de filmes. Ele permite que usuários façam operações como criar, listar, atualizar e deletar filmes no banco de dados. A aplicação foi construída com foco em servir como base para sistemas administrativos ou plataformas de gerenciamento, podendo ser facilmente adaptada para outros contextos. Ela utiliza PostgreSQL como banco de dados relacional, e oferece recursos de pesquisa e filtragem de filmes por critérios como gênero e ano.",
-      tecnologia: "https://skillicons.dev/icons?i=java,spring,postgres",
-      imagem: "https://i.pinimg.com/736x/b7/ed/c0/b7edc0724c55f87574e4350f66b0a1a9.jpg"
-    },
-    {
-      nome: "Projeto Stem Verde",
-      link_back: "https://github.com/mateus26game/front_end_faculdade_angular",
-      linkdoVideo: "https://projeto-api-8rj2.vercel.app/",
-      texto: "Site em Angular para acompanhar novidades do mundo dos jogos.",
-      textoDetalhado: "Stem Verde é um site desenvolvido com Angular e estilizado com Tailwind CSS, focado em trazer ao usuário uma experiência interativa com o mundo dos games. A aplicação consome uma API pública de jogos, permitindo que os usuários: Acompanhem notícias e lançamentos de jogos Visualizem detalhes como título, descrição, imagens e classificações Criem e gerenciem sua lista personalizada de jogos favoritos.",
-      tecnologia: "https://skillicons.dev/icons?i=java,spring,postgres",
-      imagem: "https://i.pinimg.com/736x/b6/55/e6/b655e6818d1532b7a9dfc872eda73e53.jpg"
-    },{
-      nome: "Chatbot com Inteligência Artificial",
-      link_back: "https://github.com/seu-repo/chatbot-ai",
-      linkdoVideo: "https://www.youtube.com/watch?v=8uTWnjVfj9Q",
-      texto: "Chatbot com IA usando Spring Boot e API do Google Gemini.",
-      textoDetalhado: "Chatbot desenvolvido em Java com Spring Boot, que permite conversas dinâmicas com personagens da cultura pop usando a API Google Gemini para respostas inteligentes. O backend utiliza banco de dados relacional para armazenar informações e contexto das interações. A interface web é construída com HTML, CSS e JavaScript, focando em usabilidade e responsividade. Tecnologias: Java, Spring Boot, Google Gemini, banco de dados relacional, HTML/CSS/JS.",
-      tecnologia: "https://skillicons.dev/icons?i=java,spring,postgres,mysql,angular",
-      imagem: "https://i.pinimg.com/736x/b9/7f/2d/b97f2db55c3af4343b5bf512143e0492.jpg"
+      nome: "Sistema SaaS para Barbearias",
+      descricao: "Sistema completo para gerenciamento de barbearias.",
+      descricaoCompleta: `O Barber Manager é um sistema SaaS desenvolvido para automatizar toda a gestão de barbearias.O sistema possui versões Web e Mobile, permitindo controlar clientes, agendamentos, pagamentos, emissão de PDF, dashboard administrativo, autenticação JWT e diversos recursos voltados ao gerenciamento do negócio.O backend foi desenvolvido em Java utilizando Spring Boot, seguindo arquitetura MVC, autenticação JWT, PostgreSQL e documentação Swagger.O painel administrativo foi desenvolvido em Angular com foco em desempenho, responsividade e facilidade de manutenção. Por questões de segurança e estratégia comercial, parte da arquitetura e das telas reais permanecem privadas.`,
+      github: "https://github.com/mateus26game/tela-de-login",
+      video: "https://youtu.be/yy0Betc2Has",
+      tecnologias:"https://skillicons.dev/icons?i=java,spring,angular,postgres,docker,git",
+      imagemCapa:"https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/122eae73-223a-4d82-8700-2bb0c819ae6a.webp",
+      tituloImagem1: "Tela Principal",
+      imagem1:"https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/122eae73-223a-4d82-8700-2bb0c819ae6a.webp",
+      tituloImagem2: "Gestão de Clientes",
+      imagem2:"https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/b07f9dfa-b35f-466e-9dca-c2991c3711ed.webp",
+      tituloImagem3: "Dashboard Administrativo",
+      imagem3:"https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/10570b8a-52c1-4b16-b718-bdf862cb8d65.webp",
+      tituloImagem4: "Tela de Relatórios PDF",
+      imagem4:"https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/55467e18-ca2d-454b-ad0b-9135d4b8e289.webp",
+      tituloUml: "Diagrama UML",
+      uml:"https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/81d319ad-9f80-4091-a8ce-7edebd28e899.webp",
+      tituloArquitetura: "Arquitetura do Sistema",
+      arquitetura:"https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/60aaaa44-d59b-4a4e-a644-44f35f683fff.webp",
+      privado: true,
+      tituloAviso: "Projeto Privado",
+      descricaoAviso: `As telas, diagramas UML e imagens apresentadas nesta demonstração possuem apenas finalidade ilustrativa.A versão completa do sistema contém funcionalidades, regras de negócio, estrutura interna, integrações e arquitetura que permanecem privadas por questões de segurança, estratégia comercial e proteção da propriedade intelectual.Esta apresentação mostra apenas parte do projeto.`
+
     }
-  ];
-  
 
-  getProjetos() {
+  ];
+
+  getProjetos(): Projeto[] {
     return this.projetos;
   }
+
 }

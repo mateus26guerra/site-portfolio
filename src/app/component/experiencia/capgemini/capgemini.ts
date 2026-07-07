@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-capgemini',
   standalone: false,
   templateUrl: './capgemini.html',
-  styleUrl: './capgemini.css'
+  styleUrls: ['./capgemini.css']
 })
 export class Capgemini {
 

@@ -1,48 +1,67 @@
-<h1 class="section-title formacao-box">Formação Acadêmica</h1>
+<h1 class="section-title">Formação Acadêmica</h1>
 
+<div class="formacao-box">
+  <h2>UNINASSAU / Bacharel em Ciência da Computação</h2>
 
+  <p class="periodo-info">
+    Início: Abril de 2023 – Previsão de término: Dezembro de 2026
+    <br />
+    Atualmente no <strong>{{ periodoAtual }}º período</strong>
+  </p>
 
-    <div class="formacao-box">
-      <h2>UNINASSAU / Bacharel em Ciência da Computação</h2>
-      <p class="periodo-info">
-        Início: Abril de 2023 – Previsão de término: Dezembro de 2026 <br />
-        Atualmente no <strong>7º período</strong>
-      </p>
-      <p class="descricao-formacao">
-        Durante minha graduação, estou desenvolvendo habilidades sólidas em desenvolvimento de software,
-        com foco em back-end, algoritmos, estrutura de dados, banco de dados e práticas modernas de engenharia
-        de software. Também participo de grupos de estudo e projetos práticos que simulam ambientes reais de trabalho.
-      </p>
-    </div>
-  
+  <p class="descricao-formacao">
+    Durante minha graduação, estou desenvolvendo habilidades sólidas em
+    desenvolvimento de software, com foco em back-end, algoritmos,
+    estrutura de dados, banco de dados e práticas modernas de engenharia
+    de software. Também participo de grupos de estudo e projetos práticos
+    que simulam ambientes reais de trabalho.
+  </p>
+</div>
 
 <h2 class="section-title">Cursos Complementares</h2>
 
 <div class="cursos-section">
-    <button class="carousel-btn left-btn" (click)="scrollLeft()" aria-label="Voltar">
-        ‹
-      </button>
-  <div class="cursos-carousel" id="cursos-carousel" #cursosCarousel>
-    <div class="curso-card" *ngFor="let curso of cursosUdemy">
-      <a [href]="curso.link" target="_blank">
-        <img [src]="curso.imagem" [alt]="curso.titulo" class="curso-img" />
-        <h3 class="curso-titulo">{{ curso.titulo }}</h3>
-        <p class="curso-plataforma">{{ curso.plataforma }}</p>
-      </a>
+
+  <div class="cursos-carousel">
+
+    <div class="carousel-track">
+
+      <div
+        class="curso-card"
+        *ngFor="let curso of cursosUdemyDuplicados">
+
+        <a
+          [href]="curso.link"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <img
+            [src]="curso.imagem"
+            [alt]="curso.titulo"
+            class="curso-img">
+
+          <h3 class="curso-titulo">
+            {{ curso.titulo }}
+          </h3>
+
+          <p class="curso-plataforma">
+            {{ curso.plataforma }}
+          </p>
+
+        </a>
+
+      </div>
+
     </div>
+
   </div>
 
-
-  <button class="carousel-btn right-btn" (click)="scrollRight()" aria-label="Avançar">
-    ›
-  </button>
 </div>
 
-<div class="section-title ">
-    <a [routerLink]="['/curso']">Lista de todos os cursos</a>
-  </div>
-  
-
-<div class="proxima-secao">
-  <!-- Próxima seção aqui -->
+<div class="section-title">
+  <a routerLink="/curso">
+    Lista de todos os cursos
+  </a>
 </div>
+
+<div class="proxima-secao"></div>

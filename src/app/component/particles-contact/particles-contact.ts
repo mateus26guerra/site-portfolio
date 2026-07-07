@@ -6,7 +6,7 @@ declare var particlesJS: any;
   selector: 'app-particles-contact',
   standalone: true,
   templateUrl: './particles-contact.html',
-  styleUrl: './particles-contact.css',
+  styleUrls: ['./particles-contact.css'],
   imports: []
 })
 export class ParticlesContact {

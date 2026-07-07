@@ -1,6 +1,6 @@
 // src/app/component/lista-de-todos-os-cursos/lista-de-todos-os-cursos.ts
 import { Component, OnInit } from '@angular/core';
-import { Cursos } from '../../services/cursos';
+import { Cursos, Curso } from '../../services/cursos';
 
 @Component({
   selector: 'app-lista-de-todos-os-cursos',
@@ -10,11 +10,13 @@ import { Cursos } from '../../services/cursos';
 })
 export class ListaDeTodosOsCursos implements OnInit {
 
-  cursosUdemy: any[] = [];
+  cursosUdemy: Curso[] = [];
+  cursosUdemyDuplicados: Curso[] = [];
 
   constructor(private cursosService: Cursos) {}
 
   ngOnInit(): void {
     this.cursosUdemy = this.cursosService.getCursosUdemy();
+    this.cursosUdemyDuplicados = [...this.cursosUdemy, ...this.cursosUdemy];
   }
 }

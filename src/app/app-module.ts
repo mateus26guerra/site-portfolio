@@ -29,7 +29,6 @@ import { Capgemini } from './component/experiencia/capgemini/capgemini';
     FormsModule,
     Navbar,
     FaleComigoComponent,
-    Experiencia,
     Footer,
     FormacaoComponent,
     Home,

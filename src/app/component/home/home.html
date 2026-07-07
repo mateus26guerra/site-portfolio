@@ -1,41 +1,102 @@
 <app-navbar></app-navbar>
 
-
 <div class="hero-section">
-  <div class="hero-image">
-    <img src="mateus.jpeg" alt="Foto de você" />
-  </div>
-  <div class="hero-content">
-    <h1>TRANSFORMANDO IDEIAS EM <span class="highlight">REALIDADE DIGITAL.</span></h1>
-    <p>
-      Sou desenvolvedor backend focado em crescer e entregar soluções eficientes.  
-      Encaro desafios como oportunidades para evoluir e fazer a diferença com tecnologia.
-    </p>
-    
-    <button id="btnDownload" class="btn-contact">Baixar Currículo</button>
-  </div>
-</div>
- 
-<app-experiencia></app-experiencia>
 
+  <div class="hero-image">
+    <img src="mateus2.jpeg" alt="Mateus Guerra">
+  </div>
+
+  <div class="hero-content">
+
+    <h1>
+      TRANSFORMANDO IDEIAS EM
+      <span class="highlight">
+        REALIDADE DIGITAL.
+      </span>
+    </h1>
+
+    <p>
+      Sou desenvolvedor backend focado em crescer e entregar soluções
+      eficientes. Encaro desafios como oportunidades para evoluir e fazer
+      a diferença através da tecnologia.
+    </p>
+
+    <button
+      class="btn-contact"
+      (click)="baixarCurriculo()">
+
+      Baixar Currículo
+
+    </button>
+
+    <!-- ==========================
+         ESTATÍSTICAS
+    =========================== -->
+
+    <div class="stats-container">
+
+      <div class="stat-card">
+
+        <div class="stat-icon">
+          <i class="fa-solid fa-folder-open"></i>
+        </div>
+
+        <h2>+ {{ projetos }}</h2>
+
+        <span>Repositório</span>
+
+      </div>
+
+      <div class="stat-card">
+
+        <div class="stat-icon">
+          <i class="fa-solid fa-code-commit"></i>
+        </div>
+
+        <h2>+{{ commits }}</h2>
+
+        <span>Commits</span>
+
+      </div>
+
+      <div class="stat-card">
+
+        <div class="stat-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+
+        <h2>+ {{ cursos }}</h2>
+
+        <span>Cursos</span>
+
+      </div>
+
+      <div class="stat-card">
+
+        <div class="stat-icon">
+          <i class="fa-solid fa-building"></i>
+        </div>
+
+        <h2>{{ empresas }}</h2>
+
+        <span>Empresas</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<app-experiencia></app-experiencia>
 
 <app-formacao></app-formacao>
 
 <app-projeto></app-projeto>
 
-
 <app-fale-comigo></app-fale-comigo>
+
 <app-particles-contact></app-particles-contact>
+
 <app-footer></app-footer>
-
-<script>
-  document.getElementById('btnDownload').addEventListener('click', function() {
-  const link = document.createElement('a');
-  link.href = 'mateus.pdf'; // caminho do arquivo na pasta public
-  link.download = 'Mateus_Guerra_Curriculo.pdf'; // nome do arquivo que vai baixar
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-});
-
-</script>

@@ -1,111 +1,174 @@
 import { Injectable } from '@angular/core';
 
+export interface Curso {
+  titulo: string;
+  imagem: string;
+  plataforma: string;
+  link: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class Cursos {
   constructor() {}
 
-  cursosUdemy = [
-    {
-      titulo: "Git e GitHub do básico ao avançado",
-      imagem: "https://media.licdn.com/dms/image/v2/D4D2DAQFmyQ7Q4LNKzw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1734275789079?e=1754078400&v=beta&t=xM1Gj9K0PvIgequOUeiwK4MYOLXj3-er_jrx_43VDVc",
-      plataforma: "Udemy",
-      link: "https://www.udemy.com/course/typescript-do-basico-ao-avancado"
-    },
-    {
-      titulo: "Cyber Security",
-      imagem: "https://media.licdn.com/dms/image/v2/D4D2DAQH9qeoHVq3oAA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1734275673244?e=1754078400&v=beta&t=D8Q5JklYXQMLImd3Zf7gziV9ccBxCMUTirM4ptukccc",
-      plataforma: "Udemy",
-      link: "https://www.udemy.com/course/nestjs-fundamentos/"
-    },
-    {
-      titulo: "AI-Assisted ",
-      imagem: "https://media.licdn.com/dms/image/v2/D4D2DAQFvA-9t_QXiTw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1734558926088?e=1754078400&v=beta&t=XpGP0KH81KARZ0ygONpovRIFQ6hJqj1Uyh1MhFK6TPI",
-      plataforma: "Compass.uol",
-      link: "https://www.udemy.com/course/nestjs-fundamentos/"
-    },
-    {
-      titulo: "Gen AI Technical ",
-      imagem: "https://media.licdn.com/dms/image/v2/D4D2DAQHV_ZWzZYzEoQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1734559117026?e=1754078400&v=beta&t=fJrVt-RH_TYjyDnTiu617zIK5EzqOhcV9lDrgCQZmUo",
-      plataforma: "Compass.oul",
-      link: "https://www.udemy.com/course/nestjs-fundamentos/"
-    },
-    {
-      titulo: "Inteligência Artificial e Java ",
-      imagem: "https://media.licdn.com/dms/image/v2/D4D2DAQFLRo-lL04WTQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1735321619181?e=1754078400&v=beta&t=y-6jF0SoGbIwrK-9hjmglIdaQhhSXuD-RyBBUTouqQ0",
-      plataforma: "Alura",
-      link: "https://www.udemy.com/course/nestjs-fundamentos/"
-    },
-    {
-      titulo: "Metodologias Ágeis",
-      imagem: "https://media.licdn.com/dms/image/v2/D4D2DAQErgc5Yceg7pg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1734275570271?e=1754078400&v=beta&t=0nBVe2Nd01pOoF8p7Tr6zK6PPFdAw1MsepbLouY8a84",
-      plataforma: "Udemy",
-      link: "https://www.udemy.com/course/nestjs-fundamentos/"
-    },
-    {
-      titulo: "Java Web: Spring Boot",
-      imagem: "https://media.licdn.com/dms/image/v2/D4D2DAQEcb1qBV2aJyg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1735320143926?e=1754078400&v=beta&t=RmwiAKmK9DogCMSAnDcrUXTA93XasLhyiZJLWKNMi7g",
-      plataforma: "Alura",
-      link: "https://www.udemy.com/course/nestjs-fundamentos/"
-    },
-    {
-      titulo: "Java e Spring Framework",
-      imagem: "https://media.licdn.com/dms/image/v2/D4D2DAQETAsG7fwhRvw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1735321427530?e=1754078400&v=beta&t=UdQF9TtKHfmlpHLRIhQtRy9lHRtekN0rlL_nrZNfAn0",
-      plataforma: "Alura",
-      link: "https://www.udemy.com/course/nestjs-fundamentos/"
-    },
-    {
-      titulo: "Java e Orientação a Objetos",
-      imagem: "https://media.licdn.com/dms/image/v2/D4D2DAQHoPftyetYpMA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1735319585825?e=1754078400&v=beta&t=JKRQgGWHBl17S-j1NjQ0yxNUVIvWHk93T0FiAkVklaQ",
-      plataforma: "Alura",
-      link: "https://www.udemy.com/course/nestjs-fundamentos/"
-    },
-    {
-      titulo: "Banckend com java ",
-      imagem: "https://media.licdn.com/dms/image/v2/D4D2DAQEyN-1NEXuboQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1723149725117?e=1754078400&v=beta&t=TOKTdC0uZotlJVCZ_QPekSitUCiJNmWgZBVEUWMSi6E",
-      plataforma: "Dio",
-      link: "https://www.udemy.com/course/nestjs-fundamentos/"
-    },
-    {
-      titulo: "Java AI Powered",
-      imagem: "https://hermes.dio.me/certificates/cover/H0S57ARY.jpg",
-      plataforma: "Dio",
-      link: "https://www.udemy.com/course/nestjs-fundamentos/"
-    },
-    {
-      titulo: "Decola Tech 2024",
-      imagem: "https://media.licdn.com/dms/image/v2/D4D2DAQFlrq7ibYm3dg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1705185965993?e=1754078400&v=beta&t=prOzgPmLXbtxobQBf1iyKu2a275HISnNgJ2Y32vJfXk",
-      plataforma: "Dio",
-      link: "https://www.udemy.com/course/nestjs-fundamentos/"
-    },
-    {
-      titulo: "JavaScript Basics for Beginners ",
-      imagem: "https://media.licdn.com/dms/image/v2/D4E2DAQHw6vjT0f6W_w/profile-treasury-document-cover-images_480/B4EZdDUI15HcA0-/0/1749181043405?e=1754078400&v=beta&t=-iOymHBixlFT1PZNOXhtdk1Bn6joiG2vt7fr4QdXB2M",
-      plataforma: "Udemy",
-      link: "https://www.udemy.com/course/nestjs-fundamentos/"
-    },
-    {
-      titulo: "NestJS_ The Complete",
-      imagem: "https://media.licdn.com/dms/image/v2/D4D2DAQG8_A9FrhHGSA/profile-treasury-document-cover-images_480/B4DZdDKkxIGUA0-/0/1749178536342?e=1754078400&v=beta&t=rNmv6Rbz37m5rdmBiFDxv5FJDUgKN8H6Orj9MJ87gII",
-      plataforma: "Udemy",
-      link: "https://www.udemy.com/course/nestjs-fundamentos/"
-    },
-    {
-      titulo: "Node.js, Express, MongoDB",
-      imagem: "https://media.licdn.com/dms/image/v2/D4E2DAQELFWxG1PHMRw/profile-treasury-document-cover-images_480/B4EZdDUU2QG4A8-/0/1749181092600?e=1754078400&v=beta&t=piAYXA6YUaqbij2LMFxhS2EdTARpgPv4XbV0fdFWDvM",
-      plataforma: "Udemy",
-      link: "https://www.udemy.com/course/nestjs-fundamentos/"
-    },
-    {
-      titulo: "Understanding TypeScript",
-      imagem: "https://media.licdn.com/dms/image/v2/D4D2DAQFN-SdA25WrFg/profile-treasury-document-cover-images_480/B4DZdDLrMwH4Aw-/0/1749178824850?e=1754078400&v=beta&t=XdjXbaE2EVfvjRQl4UiI6E4fkY2r5qpLGRXlJfdq3GQ",
-      plataforma: "Udemy",
-      link: "https://www.udemy.com/course/nestjs-fundamentos/"
-    }
+  cursosUdemy: Curso[] = [
+
+{
+  titulo: "Design Patterns com Java - Entendendo Padrões de Projeto",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/0aacce94-cef9-48cb-b478-63644e73a265.webp",
+  plataforma: "Udemy",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Android Kotlin",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/324136c7-2a9e-4e89-88c9-10eab04be838.webp",
+  plataforma: "PorWay",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Docker para Desenvolvedores (com Docker Swarm e Kubernetes)",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/9431ef70-6a77-4249-a83f-0b3fbc730d41.webp",
+  plataforma: "Udemy",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Java COMPLETO Programação Orientada a Objetos + Projetos",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/96522d6a-9e45-4ea7-846a-b548d68bc2c0.webp",
+  plataforma: "Udemy",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Microsserviços Java com Spring Boot e Spring Cloud",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/936f5ad3-f6bb-44b6-b3b1-46a28d905ec7.webp",
+  plataforma: "Udemy",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Testes Unitários em Java: Domine JUnit 4, Mockito e TDD",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/036d5fd0-0b33-4c9b-b91d-f35336e2d788.webp",
+  plataforma: "Udemy",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Node.js, Express, MongoDB & More The Complete Bootcamp",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/16262845-9e80-4687-9a3d-f8285d0a9845.webp",
+  plataforma: "Udemy",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "JavaScript Basics for Beginners",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/f220ae74-3b6f-4f81-a126-beced7050fb3.webp",
+  plataforma: "Udemy",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Understanding TypeScript",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/b52eedd5-a05d-4fb9-a137-abfc15eeab25.webp",
+  plataforma: "Udemy",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "NestJS: The Complete Developer's Guide",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/d0c9238b-a72c-4a1d-b6b0-c401b3fb8bc4.webp",
+  plataforma: "Udemy",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Inteligência Artificial e Java",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/62f05eef-9f7d-4b9f-98e5-993f545476cc.webp",
+  plataforma: "Alura",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Understanding TypeScript",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/b52eedd5-a05d-4fb9-a137-abfc15eeab25.webp",
+  plataforma: "Udemy",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "NestJS_ The Complete Developer's Guide",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/d0c9238b-a72c-4a1d-b6b0-c401b3fb8bc4.webp",
+  plataforma: "Udemy",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Inteligência Artificial e Java",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/62f05eef-9f7d-4b9f-98e5-993f545476cc.webp",
+  plataforma: "Alura",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Java e Spring Framework",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/2e231148-67fe-401e-bbc0-252dbc50ac57.webp",
+  plataforma: "Alura",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Java Web: crie aplicações usando Spring Boot",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/0ae5d605-f7a1-4de8-8f15-19b37e6ec5e7.webp",
+  plataforma: "Alura",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Java e Orientação a Objetos",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/91403023-5a97-4b11-bcec-cd129bb5bb05.webp",
+  plataforma: "Alura",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Gen AI Technical",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/df01135b-ffc4-48d7-a71c-a2fedd4f5ebe.webp",
+  plataforma: "Compass UOL",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "AI-Assisted",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/22880835-5a71-4525-a12a-fd5e6b20ce11.webp",
+  plataforma: "Compass UOL",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Git e GitHub do básico ao avançado (c/ gist e GitHub Pages)",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/a4bc06ea-1d00-4ed5-8286-c5800e28bbbd.webp",
+  plataforma: "Compass UOL",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "The Absolute Beginners Guide to Cyber Security 2024 - Part 1",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/3db2ebc1-d8af-4ef5-a155-74c42d56fa1b.webp",
+  plataforma: "Udemy",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Metodologias Ágeis(XP, Scrum, Lean e Kanban )",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/b603619e-e22b-4565-b81f-3c5b14012828.webp",
+  plataforma: "Udemy",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Santander 2024 - Backend com Java",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/5caf5578-2b83-4800-9df9-46d60ba73e03.webp",
+  plataforma: "Dio",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Java AI Powered",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/1a056011-29e9-4a34-8668-d8e651e5f4a2.webp",
+  plataforma: "Dio",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+},
+{
+  titulo: "Decola Tech 2024",
+  imagem: "https://pub-bed746ee956247b3abd6764681bd99d8.r2.dev/produtos/416898bb-335f-4199-9e46-4add05b23705.webp",
+  plataforma: "Dio",
+  link: "https://www.udemy.com/course/nestjs-fundamentos/"
+}
+
   ];
 
-  getCursosUdemy() {
+  getCursosUdemy(): Curso[] {
     return this.cursosUdemy;
   }
 }
