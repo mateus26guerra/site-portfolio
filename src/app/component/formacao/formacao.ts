@@ -3,6 +3,11 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Cursos, Curso } from '../../services/cursos';
 
+interface Certificacao {
+  titulo: string;
+  imagem: string;
+}
+
 @Component({
   selector: 'app-formacao',
   standalone: true,
@@ -15,6 +20,16 @@ export class FormacaoComponent implements OnInit {
   periodoAtual = 0;
   cursosUdemy: Curso[] = [];
   cursosUdemyDuplicados: Curso[] = [];
+  certificacoes: Certificacao[] = [
+    {
+      titulo: 'AZ-900 - Microsoft Azure Fundamentals',
+      imagem: '/image/certificaoes%20/az-900.png'
+    },
+    {
+      titulo: 'AI-900 - Microsoft Azure AI Fundamentals',
+      imagem: '/image/certificaoes%20/AI-900.png'
+    }
+  ];
 
   constructor(private cursos:Cursos){}
 

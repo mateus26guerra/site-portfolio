@@ -18,6 +18,18 @@
   </p>
 </div>
 
+<h2 class="section-title">Certificações</h2>
+
+<div class="certificacoes-section">
+  <div class="certificacao-card" *ngFor="let certificacao of certificacoes">
+    <img
+      [src]="certificacao.imagem"
+      [alt]="certificacao.titulo"
+      class="certificacao-img">
+    <h3 class="certificacao-titulo">{{ certificacao.titulo }}</h3>
+  </div>
+</div>
+
 <h2 class="section-title">Cursos Complementares</h2>
 
 <div class="cursos-section">
