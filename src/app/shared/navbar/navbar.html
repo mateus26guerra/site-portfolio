@@ -1,11 +1,32 @@
 <nav class="navbar">
-    
-      <ul class="nav-links">
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#sobre">Sobre Mim</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-  </nav>
-  
+  <div class="navbar-inner">
+    <a class="brand" href="#inicio" (click)="irPara($event, 'inicio')">Mateus Guerra</a>
 
+    <button
+      type="button"
+      class="menu-toggle"
+      [class.open]="menuOpen"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen"
+      aria-label="Abrir menu de navegação"
+    >
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links" [class.open]="menuOpen">
+      @for (link of links; track link.id) {
+        <li>
+          <a
+            [href]="'#' + link.id"
+            [class.active]="secaoAtiva === link.id"
+            [attr.aria-current]="secaoAtiva === link.id ? 'true' : null"
+            (click)="irPara($event, link.id)"
+          >
+            {{ link.label }}
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+</nav>
