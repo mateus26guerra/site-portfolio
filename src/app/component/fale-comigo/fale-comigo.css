@@ -31,8 +31,13 @@
 
     display:grid;
     grid-template-columns:5fr 6fr;
-    gap:64px;
+    gap:56px;
     align-items:start;
+    padding:40px;
+    background:#12161d;
+    border:1px solid rgba(148,163,184,.14);
+    border-radius:8px;
+    box-shadow:0 24px 48px rgba(2,6,23,.45);
 
 }
 
@@ -152,8 +157,8 @@
     display:flex;
     flex-direction:column;
     gap:20px;
-    padding:32px;
-    background:#151a23;
+    padding:28px;
+    background:#1a202b;
     border:1px solid rgba(148,163,184,.14);
     border-radius:8px;
 
@@ -279,13 +284,14 @@
     .contato-grid{
 
         grid-template-columns:1fr;
-        gap:40px;
+        gap:32px;
+        padding:24px 18px;
 
     }
 
     .contato-form{
 
-        padding:22px;
+        padding:20px;
 
     }
 

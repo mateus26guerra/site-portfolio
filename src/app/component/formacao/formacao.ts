@@ -18,6 +18,8 @@ interface Certificacao {
 export class FormacaoComponent implements OnInit {
 
   periodoAtual = 0;
+  readonly totalPeriodos = 8;
+  readonly periodos = Array.from({ length: this.totalPeriodos }, (_, i) => i + 1);
   cursosUdemy: Curso[] = [];
   cursosUdemyDuplicados: Curso[] = [];
   certificacoes: Certificacao[] = [
@@ -50,7 +52,7 @@ export class FormacaoComponent implements OnInit {
     const meses=(hoje.getFullYear()-inicio.getFullYear())*12
     +(hoje.getMonth()-inicio.getMonth());
 
-    this.periodoAtual=Math.floor(meses/6)+1;
+    this.periodoAtual=Math.min(Math.floor(meses/6)+1, this.totalPeriodos);
 
   }
 

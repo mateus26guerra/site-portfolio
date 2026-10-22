@@ -1,0 +1,362 @@
+/* ======================================================
+   SEÇÃO
+====================================================== */
+
+:host{
+
+    display:block;
+
+}
+
+.artigos-section{
+
+    max-width:1040px;
+    margin:0 auto;
+    padding:120px 24px 0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.section-title{
+
+    color:#f1f5f9;
+    font-size:2rem;
+    text-align:center;
+    margin:0 0 48px;
+
+}
+
+.artigos-lista{
+
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+
+}
+
+/* ======================================================
+   CARD
+====================================================== */
+
+.artigo-card{
+
+    display:grid;
+    grid-template-columns:300px minmax(0, 1fr);
+    background:#141821;
+    border:1px solid rgba(148,163,184,.14);
+    border-radius:8px;
+    overflow:hidden;
+    transition:border-color .25s ease;
+
+}
+
+.artigo-card:hover{
+
+    border-color:rgba(59,130,246,.55);
+
+}
+
+/* Capa só com tipografia: as siglas do tema empilhadas */
+.artigo-capa{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:4px;
+    padding:32px;
+    background:#1e3a8a;
+    border-right:1px solid rgba(148,163,184,.14);
+
+}
+
+.artigo-capa span{
+
+    color:#dbeafe;
+    font-size:2.6rem;
+    font-weight:800;
+    letter-spacing:-0.02em;
+    line-height:1.05;
+
+}
+
+.artigo-capa span:nth-child(2){
+
+    color:#93c5fd;
+
+}
+
+.artigo-capa span:nth-child(3){
+
+    color:#60a5fa;
+
+}
+
+.artigo-conteudo{
+
+    display:flex;
+    flex-direction:column;
+    padding:28px 32px;
+
+}
+
+.artigo-meta{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 20px;
+    margin:0 0 12px;
+    color:#94a3b8;
+    font-size:.88rem;
+
+}
+
+.artigo-meta span{
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+}
+
+.artigo-meta i{
+
+    color:#3b82f6;
+
+}
+
+.artigo-titulo{
+
+    margin:0 0 10px;
+    color:#f8fafc;
+    font-size:1.35rem;
+    font-weight:700;
+    letter-spacing:-0.01em;
+    line-height:1.3;
+
+}
+
+.artigo-resumo{
+
+    margin:0 0 24px;
+    max-width:62ch;
+    color:#cbd5e1;
+    line-height:1.65;
+
+}
+
+/* ======================================================
+   ESCOLHA DA PLATAFORMA
+====================================================== */
+
+.artigo-leitura{
+
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:12px 16px;
+    margin-top:auto;
+    padding-top:20px;
+    border-top:1px solid rgba(148,163,184,.14);
+
+}
+
+.leitura-rotulo{
+
+    color:#94a3b8;
+    font-size:.9rem;
+    font-weight:600;
+
+}
+
+.leitura-botoes{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+
+}
+
+.botao-plataforma{
+
+    box-sizing:border-box;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 16px;
+    border:1px solid rgba(148,163,184,.25);
+    border-radius:8px;
+    color:#e2e8f0;
+    font-size:.92rem;
+    font-weight:600;
+    text-decoration:none;
+    transition:background-color .2s ease, border-color .2s ease;
+
+}
+
+.botao-plataforma i{
+
+    font-size:1.15rem;
+
+}
+
+.botao-plataforma:hover{
+
+    background:#2563eb;
+    border-color:#2563eb;
+    color:#fff;
+
+}
+
+.botao-plataforma:active{
+
+    transform:scale(.98);
+
+}
+
+.botao-plataforma:focus-visible{
+
+    outline:2px solid #93c5fd;
+    outline-offset:2px;
+
+}
+
+/* ======================================================
+   RESPONSIVO
+====================================================== */
+
+@media(max-width:760px){
+
+    .artigos-section{
+
+        padding:80px 16px 0;
+
+    }
+
+    .artigo-card{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .artigo-capa{
+
+        flex-direction:row;
+        flex-wrap:wrap;
+        gap:6px 16px;
+        padding:22px;
+        border-right:0;
+        border-bottom:1px solid rgba(148,163,184,.14);
+
+    }
+
+    .artigo-capa span{
+
+        font-size:1.9rem;
+
+    }
+
+    .artigo-conteudo{
+
+        padding:22px;
+
+    }
+
+    .artigo-titulo{
+
+        font-size:1.15rem;
+
+    }
+
+    .leitura-botoes,
+    .botao-plataforma{
+
+        width:100%;
+
+    }
+
+    .botao-plataforma{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    .artigo-card,
+    .botao-plataforma{
+
+        transition:none;
+
+    }
+
+}
+
+/* Celular: card de artigo mais compacto */
+@media(max-width:600px){
+
+    .artigo-capa{
+
+        padding:10px 16px;
+
+    }
+
+    .artigo-capa span{
+
+        font-size:1.15rem;
+
+    }
+
+    .artigo-conteudo{
+
+        padding:14px 16px 16px;
+
+    }
+
+    .artigo-meta{
+
+        font-size:.8rem;
+        margin-bottom:8px;
+
+    }
+
+    .artigo-titulo{
+
+        font-size:.95rem;
+        margin-bottom:8px;
+
+    }
+
+    .artigo-resumo{
+
+        font-size:.84rem;
+        line-height:1.5;
+        margin-bottom:16px;
+
+    }
+
+    .artigo-leitura{
+
+        padding-top:14px;
+        gap:10px;
+
+    }
+
+    .leitura-botoes{
+
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+
+    }
+
+    .botao-plataforma{
+
+        padding:9px 10px;
+        font-size:.85rem;
+
+    }
+
+}

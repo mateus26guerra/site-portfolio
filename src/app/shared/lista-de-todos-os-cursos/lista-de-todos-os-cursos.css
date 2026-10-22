@@ -1,81 +1,285 @@
-.section-title {
-    color: white;
-    font-size: 3rem;
-    font-weight: 900;
-    margin-top: 15vh;     /* <-- espaço acima */
-    margin-bottom: 2rem;
-    font-family: 'Fira Sans', sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  /* lista-de-todos-os-cursos.css */
-.cursos-lista {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
-    justify-content: center;
-  }
-  
-  .curso-card {
-    background: #1e293b;
-    border-radius: 10px;
-    width: 200px;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
-    transition: transform 0.3s ease;
-  }
-  
-  .curso-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .curso-img {
-    max-width: 100%;
-    border-radius: 6px;
-    margin-bottom: 0.5rem;
-  }
-  
-  .curso-titulo {
-    color: #ffffff;
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .curso-plataforma {
-    color: #93c5fd;
-    font-size: 0.85rem;
-  }
-  
+/* ======================================================
+   PÁGINA
+====================================================== */
 
-  a {
-    text-decoration: none;  /* remove o underline */
-    color: inherit;         /* mantém a cor do texto ao redor */
-    outline: none;          /* remove o contorno de foco (atenção a acessibilidade!) */
-  }
-  
-  /* Opcional: se quiser remover o contorno azul ao clicar/tabular no link, use: */
-  a:focus, a:active {
-    outline: none;
-  }
-  
+.cursos-pagina{
 
-  
-  .section-title a {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    background-color:  rgba(59, 130, 246, 0.2);
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
-    font-weight: 500;
-  }
-  
-  .section-title a:hover {
-    background-color: rgba(11, 66, 153, 0.2);
-  }
-  
+    max-width:1240px;
+    margin:0 auto;
+    padding:120px 24px 15vh;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.voltar{
+
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:24px;
+    padding:8px 14px;
+    border:1px solid rgba(148,163,184,.25);
+    border-radius:8px;
+    color:#cbd5e1;
+    font-size:.9rem;
+    font-weight:600;
+    text-decoration:none;
+    transition:background-color .2s ease, border-color .2s ease;
+
+}
+
+.voltar:hover{
+
+    background:#1a202b;
+    border-color:rgba(148,163,184,.45);
+
+}
+
+.voltar:focus-visible{
+
+    outline:2px solid #3b82f6;
+    outline-offset:2px;
+
+}
+
+.titulo-pagina{
+
+    margin:0 0 8px;
+    color:#f8fafc;
+    font-size:2.2rem;
+    font-weight:700;
+    letter-spacing:-0.02em;
+
+}
+
+.subtitulo{
+
+    margin:0 0 40px;
+    color:#94a3b8;
+
+}
+
+/* ======================================================
+   GRADE DE CARDS
+====================================================== */
+
+.cursos-lista{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(270px, 1fr));
+    gap:20px;
+
+}
+
+/* ======================================================
+   CARD (mesmo estilo do carrossel da home)
+====================================================== */
+
+.curso-card{
+
+    padding:10px;
+    box-sizing:border-box;
+    background:#141821;
+    border:1px solid rgba(148,163,184,.14);
+    border-radius:8px;
+    transition:border-color .25s ease, transform .25s ease;
+
+}
+
+.curso-card:hover{
+
+    border-color:rgba(59,130,246,.55);
+    transform:translateY(-4px);
+
+}
+
+.curso-card a{
+
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    color:inherit;
+    text-decoration:none;
+
+}
+
+.curso-card a:focus-visible{
+
+    outline:2px solid #3b82f6;
+    outline-offset:6px;
+    border-radius:4px;
+
+}
+
+/* Moldura do certificado: mostra a imagem inteira, sem cortar */
+.curso-moldura{
+
+    aspect-ratio:800 / 580;
+    padding:6px;
+    background:#f8fafc;
+    border-radius:4px;
+
+}
+
+.curso-img{
+
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+
+}
+
+.curso-corpo{
+
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:12px;
+    padding:14px 6px 4px;
+
+}
+
+.curso-titulo{
+
+    margin:0;
+    color:#f1f5f9;
+    font-size:.95rem;
+    font-weight:600;
+    line-height:1.4;
+
+    /* Títulos longos ficam em no máximo 2 linhas, assim todos os cards têm a mesma altura */
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    min-height:2.8em;
+
+}
+
+.curso-rodape{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding-top:12px;
+    border-top:1px solid rgba(148,163,184,.14);
+    font-size:.85rem;
+
+}
+
+.curso-plataforma{
+
+    color:#94a3b8;
+
+}
+
+.curso-ver{
+
+    display:flex;
+    align-items:center;
+    gap:6px;
+    color:#3b82f6;
+    font-weight:600;
+
+}
+
+.curso-ver i{
+
+    font-size:.75rem;
+    transition:transform .25s ease;
+
+}
+
+.curso-card:hover .curso-ver i{
+
+    transform:translateX(3px);
+
+}
+
+/* ======================================================
+   RESPONSIVO
+====================================================== */
+
+@media(max-width:600px){
+
+    .cursos-pagina{
+
+        padding:96px 16px 12vh;
+
+    }
+
+    .titulo-pagina{
+
+        font-size:1.7rem;
+
+    }
+
+    .cursos-lista{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    .curso-card,
+    .curso-ver i{
+
+        transition:none;
+
+    }
+
+}
+
+/* Celular: 2 cards menores por linha */
+@media(max-width:600px){
+
+    .cursos-lista{
+
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:12px;
+
+    }
+
+    .curso-card{
+
+        padding:6px;
+
+    }
+
+    .curso-moldura{
+
+        padding:3px;
+
+    }
+
+    .curso-corpo{
+
+        gap:8px;
+        padding:8px 4px 2px;
+
+    }
+
+    .curso-titulo{
+
+        font-size:.8rem;
+
+    }
+
+    .curso-rodape{
+
+        flex-direction:column;
+        align-items:flex-start;
+        gap:4px;
+        padding-top:8px;
+        font-size:.75rem;
+
+    }
+
+}

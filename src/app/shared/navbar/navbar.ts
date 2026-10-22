@@ -1,4 +1,5 @@
 import { Component, OnDestroy, afterNextRender } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -17,13 +18,14 @@ export class Navbar implements OnDestroy {
     { id: 'jornada', label: 'Jornada' },
     { id: 'formacao', label: 'Formação' },
     { id: 'projetos', label: 'Projetos' },
+    { id: 'artigos', label: 'Artigos' },
     { id: 'contato', label: 'Contato' }
   ];
 
   menuOpen = false;
   secaoAtiva = 'inicio';
 
-  constructor() {
+  constructor(private router: Router) {
     afterNextRender(() => this.observarSecoes());
   }
 
@@ -35,6 +37,18 @@ export class Navbar implements OnDestroy {
     event.preventDefault();
     this.menuOpen = false;
 
+    const secao = document.getElementById(id);
+
+    // Fora da home (ex.: lista de cursos) a seção não existe: volta pra home e depois desce
+    if (!secao) {
+      this.router.navigateByUrl('/').then(() => setTimeout(() => this.rolarAte(id)));
+      return;
+    }
+
+    this.rolarAte(id);
+  }
+
+  private rolarAte(id: string): void {
     const secao = document.getElementById(id);
     if (!secao) return;
 
