@@ -1,22 +1,49 @@
 <h1 class="section-title">Formação Acadêmica</h1>
 
-<div class="formacao-box">
-  <h2>UNINASSAU / Bacharel em Ciência da Computação</h2>
+<article class="formacao-card">
 
-  <p class="periodo-info">
-    Início: Abril de 2023 – Previsão de término: Dezembro de 2026
-    <br />
-    Atualmente no <strong>{{ periodoAtual }}º período</strong>
-  </p>
+  <div class="formacao-icone" aria-hidden="true">
+    <i class="fa-solid fa-graduation-cap"></i>
+  </div>
 
-  <p class="descricao-formacao">
-    Durante minha graduação, estou desenvolvendo habilidades sólidas em
-    desenvolvimento de software, com foco em back-end, algoritmos,
-    estrutura de dados, banco de dados e práticas modernas de engenharia
-    de software. Também participo de grupos de estudo e projetos práticos
-    que simulam ambientes reais de trabalho.
-  </p>
-</div>
+  <div class="formacao-conteudo">
+
+    <p class="formacao-instituicao">UNINASSAU</p>
+    <h2 class="formacao-curso">Bacharelado em Ciência da Computação</h2>
+
+    <ul class="formacao-meta">
+      <li>
+        <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+        Abr 2023 até Dez 2026 (previsão)
+      </li>
+      <li>
+        <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+        Cursando o {{ periodoAtual }}º período
+      </li>
+    </ul>
+
+    <p class="formacao-descricao">
+      Durante a graduação estou desenvolvendo uma base sólida em desenvolvimento
+      de software, com foco em back-end, algoritmos, estrutura de dados, banco de
+      dados e práticas modernas de engenharia de software. Também participo de
+      grupos de estudo e projetos práticos que simulam ambientes reais de trabalho.
+    </p>
+
+    <div class="formacao-periodos">
+      <div class="periodos-barra" role="img" [attr.aria-label]="periodoAtual + ' de ' + totalPeriodos + ' períodos'">
+        @for (p of periodos; track p) {
+          <span
+            class="periodo"
+            [class.concluido]="p < periodoAtual"
+            [class.atual]="p === periodoAtual"></span>
+        }
+      </div>
+      <span class="periodos-texto">{{ periodoAtual }} de {{ totalPeriodos }} períodos</span>
+    </div>
+
+  </div>
+
+</article>
 
 <h2 class="section-title">Certificações</h2>
 
@@ -47,18 +74,27 @@
           target="_blank"
           rel="noopener noreferrer">
 
-          <img
-            [src]="curso.imagem"
-            [alt]="curso.titulo"
-            class="curso-img">
+          <div class="curso-moldura">
+            <img
+              [src]="curso.imagem"
+              [alt]="'Certificado: ' + curso.titulo"
+              class="curso-img"
+              loading="lazy">
+          </div>
 
-          <h3 class="curso-titulo">
-            {{ curso.titulo }}
-          </h3>
+          <div class="curso-corpo">
+            <h3 class="curso-titulo">
+              {{ curso.titulo }}
+            </h3>
 
-          <p class="curso-plataforma">
-            {{ curso.plataforma }}
-          </p>
+            <div class="curso-rodape">
+              <span class="curso-plataforma">{{ curso.plataforma }}</span>
+              <span class="curso-ver">
+                Ver <span class="ver-extra">certificado</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
 
         </a>
 

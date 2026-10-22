@@ -114,11 +114,6 @@
 
 }
 
-.imagem-card:hover{
-
-    box-shadow:none;
-
-}
 
 
 /* =====================================
@@ -238,6 +233,36 @@
 ===================================== */
 
 @media(max-width:900px){
+
+    .section-title{
+
+        font-size:2rem;
+
+        margin-bottom:24px;
+
+    }
+
+    .carousel{
+
+        padding:16px 15px 24px;
+
+    }
+
+    .projeto-item:hover{
+
+        transform:none;
+
+    }
+
+    .info h2{
+
+        font-size:1.1rem;
+
+        min-height:0;
+
+        margin-bottom:10px;
+
+    }
 
     .projeto-item{
 
@@ -714,4 +739,53 @@
     .lightbox-bg{ animation:none; }
 
     .carrossel-nav{ transition:none; }
+}
+
+/* Telas sem mouse (celular): o nome e as tecnologias ficam sempre visíveis */
+@media (hover: none){
+
+    .info{
+
+        opacity:1;
+
+    }
+
+}
+
+/* Celular: cards de projeto menores */
+@media(max-width:600px){
+
+    .projeto-item{
+
+        min-width:170px;
+        max-width:170px;
+
+    }
+
+    .imagem-card{
+
+        width:170px;
+        height:170px;
+
+    }
+
+    .info{
+
+        margin-top:12px;
+
+    }
+
+    .info h2{
+
+        font-size:.88rem;
+        margin-bottom:8px;
+
+    }
+
+    .tech{
+
+        width:96px;
+
+    }
+
 }

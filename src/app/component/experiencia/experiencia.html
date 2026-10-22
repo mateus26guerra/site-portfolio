@@ -10,7 +10,8 @@
       class="timeline-item"
       *ngFor="let exp of experiencias; let i = index"
       [class.left]="i % 2 === 0"
-      [class.right]="i % 2 !== 0">
+      [class.right]="i % 2 !== 0"
+      [class.atual]="exp.periodoFim === 'Atualmente'">
 
       <!-- Logo -->
       <div class="timeline-circle">
@@ -22,30 +23,38 @@
       </div>
 
       <!-- Card -->
-      <div class="card">
+      <article class="card">
 
-        <span class="date-label">
-          {{ exp.periodoInicio }} - {{ exp.periodoFim }}
-        </span>
+        <div class="card-topo">
+          <span class="date-label">
+            <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+            {{ exp.periodoInicio }} até {{ exp.periodoFim | lowercase }}
+          </span>
+
+          <span class="badge-atual" *ngIf="exp.periodoFim === 'Atualmente'">Atual</span>
+        </div>
 
         <h3 class="card-title">
           {{ exp.empresa }}
         </h3>
 
-        <h4>
+        <p class="card-cargo">
           {{ exp.cargo }}
-        </h4>
+        </p>
 
         <p class="card-text">
           {{ exp.descricao }}
         </p>
 
-        <img
-          class="tech-icons"
-          [src]="'https://skillicons.dev/icons?i=' + exp.tecnologias"
-          [alt]="exp.empresa">
+        <div class="card-tecnologias">
+          <img
+            class="tech-icons"
+            [src]="'https://skillicons.dev/icons?i=' + exp.tecnologias"
+            [alt]="'Tecnologias usadas na ' + exp.empresa"
+            loading="lazy">
+        </div>
 
-      </div>
+      </article>
 
     </div>
 

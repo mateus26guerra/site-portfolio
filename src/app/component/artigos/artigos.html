@@ -1,0 +1,57 @@
+<section class="artigos-section">
+
+  <h2 class="section-title">Artigos</h2>
+
+  <div class="artigos-lista">
+    @for (artigo of artigos; track artigo.titulo) {
+      <article class="artigo-card">
+
+        <!-- Capa tipográfica com os temas do artigo -->
+        <div class="artigo-capa" aria-hidden="true">
+          @for (palavra of artigo.destaques; track palavra) {
+            <span>{{ palavra }}</span>
+          }
+        </div>
+
+        <div class="artigo-conteudo">
+
+          <p class="artigo-meta">
+            <span>
+              <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+              {{ artigo.publicadoEm }}
+            </span>
+            <span>
+              <i class="fa-regular fa-clock" aria-hidden="true"></i>
+              {{ artigo.minutosLeitura }} min de leitura
+            </span>
+          </p>
+
+          <h3 class="artigo-titulo">{{ artigo.titulo }}</h3>
+          <p class="artigo-resumo">{{ artigo.resumo }}</p>
+
+          <div class="artigo-leitura">
+            <span class="leitura-rotulo">Ler em</span>
+
+            <div class="leitura-botoes">
+              @if (artigo.links.devTo) {
+                <a class="botao-plataforma" [href]="artigo.links.devTo" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-dev" aria-hidden="true"></i>
+                  DEV Community
+                </a>
+              }
+              @if (artigo.links.medium) {
+                <a class="botao-plataforma" [href]="artigo.links.medium" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-medium" aria-hidden="true"></i>
+                  Medium
+                </a>
+              }
+            </div>
+          </div>
+
+        </div>
+
+      </article>
+    }
+  </div>
+
+</section>

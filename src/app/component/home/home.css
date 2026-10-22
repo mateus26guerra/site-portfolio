@@ -307,19 +307,28 @@ body {
 
     .stats-container{
 
-        grid-template-columns:1fr;
+        display:grid;
+
+        grid-template-columns:repeat(2, 1fr);
 
         margin-top:30px;
 
         padding:18px 0;
 
-        gap:16px;
+        gap:20px 12px;
 
     }
 
     .stat-card{
 
         padding:8px 0;
+
+    }
+
+    /* Em 2 colunas, só a coluna da esquerda leva a linha divisória */
+    .stat-card:nth-child(2n){
+
+        border-right:0;
 
     }
 
@@ -342,6 +351,8 @@ body {
         font-size:.78rem;
 
         margin-top:6px;
+
+        letter-spacing:.5px;
 
     }
 

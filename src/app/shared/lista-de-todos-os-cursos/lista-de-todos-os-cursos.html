@@ -1,20 +1,44 @@
 <app-navbar></app-navbar>
 
-<h1 class="section-title">Lista de todos os cursos</h1>
+<section class="cursos-pagina">
 
-<div class="cursos-lista">
-  <div class="curso-card" *ngFor="let curso of cursosUdemy">
-    <a [href]="curso.link" target="_blank">
-      <img [src]="curso.imagem" [alt]="curso.titulo" class="curso-img" />
-      <h3 class="curso-titulo">{{ curso.titulo }}</h3>
-      <p class="curso-plataforma">{{ curso.plataforma }}</p>
-    </a>
-  </div>
-</div>
+  <a class="voltar" [routerLink]="['']">
+    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+    Voltar
+  </a>
 
-<div class="section-title ">
-    <a [routerLink]="['']">voltar</a>
+  <h1 class="titulo-pagina">Todos os cursos</h1>
+  <p class="subtitulo">{{ cursosUdemy.length }} certificados de cursos complementares.</p>
+
+  <div class="cursos-lista">
+    <div class="curso-card" *ngFor="let curso of cursosUdemy">
+      <a [href]="curso.link" target="_blank" rel="noopener noreferrer">
+
+        <div class="curso-moldura">
+          <img
+            [src]="curso.imagem"
+            [alt]="'Certificado: ' + curso.titulo"
+            class="curso-img"
+            loading="lazy" />
+        </div>
+
+        <div class="curso-corpo">
+          <h3 class="curso-titulo">{{ curso.titulo }}</h3>
+
+          <div class="curso-rodape">
+            <span class="curso-plataforma">{{ curso.plataforma }}</span>
+            <span class="curso-ver">
+              Ver certificado
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+
+      </a>
+    </div>
   </div>
-  
+
+</section>
+
 <app-particles-contact></app-particles-contact>
 <app-footer></app-footer>

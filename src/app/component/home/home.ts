@@ -8,6 +8,7 @@ import { Navbar } from '../../shared/navbar/navbar';
 import { Experiencia } from '../experiencia/experiencia';
 import { FormacaoComponent } from '../formacao/formacao';
 import { Projetoo } from '../projeto/projeto';
+import { ArtigosComponent } from '../artigos/artigos';
 import { FaleComigoComponent } from '../fale-comigo/fale-comigo';
 import { ParticlesContact } from '../particles-contact/particles-contact';
 import { Footer } from '../../shared/footer/footer';
@@ -20,6 +21,7 @@ import { Footer } from '../../shared/footer/footer';
     Experiencia,
     FormacaoComponent,
     Projetoo,
+    ArtigosComponent,
     FaleComigoComponent,
     ParticlesContact,
     Footer
